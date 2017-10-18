@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="checkin" targetNamespace="http://tempuri.org/checkin.xsd" xmlns:mstns="http://tempuri.org/checkin.xsd" xmlns="http://tempuri.org/checkin.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="databaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="databaseConnectionString (MySettings)" PropertyReference="ApplicationSettings.HBRS.My.MySettings.GlobalReference.Default.databaseConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="databaseConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select * from tblTransaction, tblGuest, tblDiscount, tblRoom WHERE tblTransaction.GuestID = tblGuest.ID AND tblTransaction.DiscountID = tblDiscount.ID AND tblTransaction.RoomNum = tblRoom.RoomNumber AND tblTransaction.Remarks = 'Checkin' AND tblTransaction.Status = 'Active'</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TransID" DataSetColumn="TransID" />
+              <Mapping SourceColumn="GuestID" DataSetColumn="GuestID" />
+              <Mapping SourceColumn="RoomNum" DataSetColumn="RoomNum" />
+              <Mapping SourceColumn="CheckInDate" DataSetColumn="CheckInDate" />
+              <Mapping SourceColumn="CheckOutDate" DataSetColumn="CheckOutDate" />
+              <Mapping SourceColumn="ReservationDate" DataSetColumn="ReservationDate" />
+              <Mapping SourceColumn="NoOfChild" DataSetColumn="NoOfChild" />
+              <Mapping SourceColumn="NoOfAdult" DataSetColumn="NoOfAdult" />
+              <Mapping SourceColumn="AdvancePayment" DataSetColumn="AdvancePayment" />
+              <Mapping SourceColumn="DiscountID" DataSetColumn="DiscountID" />
+              <Mapping SourceColumn="tblTransaction.Remarks" DataSetColumn="tblTransaction_Remarks" />
+              <Mapping SourceColumn="tblTransaction.Status" DataSetColumn="tblTransaction_Status" />
+              <Mapping SourceColumn="tblGuest.ID" DataSetColumn="tblGuest_ID" />
+              <Mapping SourceColumn="GuestFName" DataSetColumn="GuestFName" />
+              <Mapping SourceColumn="GuestMName" DataSetColumn="GuestMName" />
+              <Mapping SourceColumn="GuestLName" DataSetColumn="GuestLName" />
+              <Mapping SourceColumn="GuestAddress" DataSetColumn="GuestAddress" />
+              <Mapping SourceColumn="GuestContactNumber" DataSetColumn="GuestContactNumber" />
+              <Mapping SourceColumn="GuestGender" DataSetColumn="GuestGender" />
+              <Mapping SourceColumn="GuestEmail" DataSetColumn="GuestEmail" />
+              <Mapping SourceColumn="tblGuest.Status" DataSetColumn="tblGuest_Status" />
+              <Mapping SourceColumn="tblGuest.Remarks" DataSetColumn="tblGuest_Remarks" />
+              <Mapping SourceColumn="tblDiscount.ID" DataSetColumn="tblDiscount_ID" />
+              <Mapping SourceColumn="DiscountType" DataSetColumn="DiscountType" />
+              <Mapping SourceColumn="DiscountRate" DataSetColumn="DiscountRate" />
+              <Mapping SourceColumn="tblDiscount.Status" DataSetColumn="tblDiscount_Status" />
+              <Mapping SourceColumn="tblRoom.ID" DataSetColumn="tblRoom_ID" />
+              <Mapping SourceColumn="RoomNumber" DataSetColumn="RoomNumber" />
+              <Mapping SourceColumn="RoomType" DataSetColumn="RoomType" />
+              <Mapping SourceColumn="RoomRate" DataSetColumn="RoomRate" />
+              <Mapping SourceColumn="NoOfOccupancy" DataSetColumn="NoOfOccupancy" />
+              <Mapping SourceColumn="tblRoom.Status" DataSetColumn="tblRoom_Status" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="checkin" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="checkin" msprop:Generator_UserDSName="checkin">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTransID" msprop:Generator_ColumnPropNameInRow="TransID" msprop:Generator_ColumnPropNameInTable="TransIDColumn" msprop:Generator_UserColumnName="TransID" type="xs:int" minOccurs="0" />
+              <xs:element name="GuestID" msprop:Generator_ColumnVarNameInTable="columnGuestID" msprop:Generator_ColumnPropNameInRow="GuestID" msprop:Generator_ColumnPropNameInTable="GuestIDColumn" msprop:Generator_UserColumnName="GuestID" type="xs:int" minOccurs="0" />
+              <xs:element name="RoomNum" msprop:Generator_ColumnVarNameInTable="columnRoomNum" msprop:Generator_ColumnPropNameInRow="RoomNum" msprop:Generator_ColumnPropNameInTable="RoomNumColumn" msprop:Generator_UserColumnName="RoomNum" type="xs:int" minOccurs="0" />
+              <xs:element name="CheckInDate" msprop:Generator_ColumnVarNameInTable="columnCheckInDate" msprop:Generator_ColumnPropNameInRow="CheckInDate" msprop:Generator_ColumnPropNameInTable="CheckInDateColumn" msprop:Generator_UserColumnName="CheckInDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CheckOutDate" msprop:Generator_ColumnVarNameInTable="columnCheckOutDate" msprop:Generator_ColumnPropNameInRow="CheckOutDate" msprop:Generator_ColumnPropNameInTable="CheckOutDateColumn" msprop:Generator_UserColumnName="CheckOutDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ReservationDate" msprop:Generator_ColumnVarNameInTable="columnReservationDate" msprop:Generator_ColumnPropNameInRow="ReservationDate" msprop:Generator_ColumnPropNameInTable="ReservationDateColumn" msprop:Generator_UserColumnName="ReservationDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NoOfChild" msprop:Generator_ColumnVarNameInTable="columnNoOfChild" msprop:Generator_ColumnPropNameInRow="NoOfChild" msprop:Generator_ColumnPropNameInTable="NoOfChildColumn" msprop:Generator_UserColumnName="NoOfChild" type="xs:int" minOccurs="0" />
+              <xs:element name="NoOfAdult" msprop:Generator_ColumnVarNameInTable="columnNoOfAdult" msprop:Generator_ColumnPropNameInRow="NoOfAdult" msprop:Generator_ColumnPropNameInTable="NoOfAdultColumn" msprop:Generator_UserColumnName="NoOfAdult" type="xs:int" minOccurs="0" />
+              <xs:element name="AdvancePayment" msprop:Generator_ColumnVarNameInTable="columnAdvancePayment" msprop:Generator_ColumnPropNameInRow="AdvancePayment" msprop:Generator_ColumnPropNameInTable="AdvancePaymentColumn" msprop:Generator_UserColumnName="AdvancePayment" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DiscountID" msprop:Generator_ColumnVarNameInTable="columnDiscountID" msprop:Generator_ColumnPropNameInRow="DiscountID" msprop:Generator_ColumnPropNameInTable="DiscountIDColumn" msprop:Generator_UserColumnName="DiscountID" type="xs:int" minOccurs="0" />
+              <xs:element name="tblTransaction_Remarks" msdata:Caption="tblTransaction.Remarks" msprop:Generator_ColumnVarNameInTable="columntblTransaction_Remarks" msprop:Generator_ColumnPropNameInRow="tblTransaction_Remarks" msprop:Generator_ColumnPropNameInTable="tblTransaction_RemarksColumn" msprop:Generator_UserColumnName="tblTransaction_Remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tblTransaction_Status" msdata:Caption="tblTransaction.Status" msprop:Generator_ColumnVarNameInTable="columntblTransaction_Status" msprop:Generator_ColumnPropNameInRow="tblTransaction_Status" msprop:Generator_ColumnPropNameInTable="tblTransaction_StatusColumn" msprop:Generator_UserColumnName="tblTransaction_Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tblGuest_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msdata:Caption="tblGuest.ID" msprop:Generator_ColumnVarNameInTable="columntblGuest_ID" msprop:Generator_ColumnPropNameInRow="tblGuest_ID" msprop:Generator_ColumnPropNameInTable="tblGuest_IDColumn" msprop:Generator_UserColumnName="tblGuest_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="GuestFName" msprop:Generator_ColumnVarNameInTable="columnGuestFName" msprop:Generator_ColumnPropNameInRow="GuestFName" msprop:Generator_ColumnPropNameInTable="GuestFNameColumn" msprop:Generator_UserColumnName="GuestFName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GuestMName" msprop:Generator_ColumnVarNameInTable="columnGuestMName" msprop:Generator_ColumnPropNameInRow="GuestMName" msprop:Generator_ColumnPropNameInTable="GuestMNameColumn" msprop:Generator_UserColumnName="GuestMName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GuestLName" msprop:Generator_ColumnVarNameInTable="columnGuestLName" msprop:Generator_ColumnPropNameInRow="GuestLName" msprop:Generator_ColumnPropNameInTable="GuestLNameColumn" msprop:Generator_UserColumnName="GuestLName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GuestAddress" msprop:Generator_ColumnVarNameInTable="columnGuestAddress" msprop:Generator_ColumnPropNameInRow="GuestAddress" msprop:Generator_ColumnPropNameInTable="GuestAddressColumn" msprop:Generator_UserColumnName="GuestAddress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GuestContactNumber" msprop:Generator_ColumnVarNameInTable="columnGuestContactNumber" msprop:Generator_ColumnPropNameInRow="GuestContactNumber" msprop:Generator_ColumnPropNameInTable="GuestContactNumberColumn" msprop:Generator_UserColumnName="GuestContactNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GuestGender" msprop:Generator_ColumnVarNameInTable="columnGuestGender" msprop:Generator_ColumnPropNameInRow="GuestGender" msprop:Generator_ColumnPropNameInTable="GuestGenderColumn" msprop:Generator_UserColumnName="GuestGender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GuestEmail" msprop:Generator_ColumnVarNameInTable="columnGuestEmail" msprop:Generator_ColumnPropNameInRow="GuestEmail" msprop:Generator_ColumnPropNameInTable="GuestEmailColumn" msprop:Generator_UserColumnName="GuestEmail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tblGuest_Status" msdata:Caption="tblGuest.Status" msprop:Generator_ColumnVarNameInTable="columntblGuest_Status" msprop:Generator_ColumnPropNameInRow="tblGuest_Status" msprop:Generator_ColumnPropNameInTable="tblGuest_StatusColumn" msprop:Generator_UserColumnName="tblGuest_Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tblGuest_Remarks" msdata:Caption="tblGuest.Remarks" msprop:Generator_ColumnVarNameInTable="columntblGuest_Remarks" msprop:Generator_ColumnPropNameInRow="tblGuest_Remarks" msprop:Generator_ColumnPropNameInTable="tblGuest_RemarksColumn" msprop:Generator_UserColumnName="tblGuest_Remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tblDiscount_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msdata:Caption="tblDiscount.ID" msprop:Generator_ColumnVarNameInTable="columntblDiscount_ID" msprop:Generator_ColumnPropNameInRow="tblDiscount_ID" msprop:Generator_ColumnPropNameInTable="tblDiscount_IDColumn" msprop:Generator_UserColumnName="tblDiscount_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="DiscountType" msprop:Generator_ColumnVarNameInTable="columnDiscountType" msprop:Generator_ColumnPropNameInRow="DiscountType" msprop:Generator_ColumnPropNameInTable="DiscountTypeColumn" msprop:Generator_UserColumnName="DiscountType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DiscountRate" msprop:Generator_ColumnVarNameInTable="columnDiscountRate" msprop:Generator_ColumnPropNameInRow="DiscountRate" msprop:Generator_ColumnPropNameInTable="DiscountRateColumn" msprop:Generator_UserColumnName="DiscountRate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tblDiscount_Status" msdata:Caption="tblDiscount.Status" msprop:Generator_ColumnVarNameInTable="columntblDiscount_Status" msprop:Generator_ColumnPropNameInRow="tblDiscount_Status" msprop:Generator_ColumnPropNameInTable="tblDiscount_StatusColumn" msprop:Generator_UserColumnName="tblDiscount_Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tblRoom_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msdata:Caption="tblRoom.ID" msprop:Generator_ColumnVarNameInTable="columntblRoom_ID" msprop:Generator_ColumnPropNameInRow="tblRoom_ID" msprop:Generator_ColumnPropNameInTable="tblRoom_IDColumn" msprop:Generator_UserColumnName="tblRoom_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="RoomNumber" msprop:Generator_ColumnVarNameInTable="columnRoomNumber" msprop:Generator_ColumnPropNameInRow="RoomNumber" msprop:Generator_ColumnPropNameInTable="RoomNumberColumn" msprop:Generator_UserColumnName="RoomNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="RoomType" msprop:Generator_ColumnVarNameInTable="columnRoomType" msprop:Generator_ColumnPropNameInRow="RoomType" msprop:Generator_ColumnPropNameInTable="RoomTypeColumn" msprop:Generator_UserColumnName="RoomType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RoomRate" msprop:Generator_ColumnVarNameInTable="columnRoomRate" msprop:Generator_ColumnPropNameInRow="RoomRate" msprop:Generator_ColumnPropNameInTable="RoomRateColumn" msprop:Generator_UserColumnName="RoomRate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NoOfOccupancy" msprop:Generator_ColumnVarNameInTable="columnNoOfOccupancy" msprop:Generator_ColumnPropNameInRow="NoOfOccupancy" msprop:Generator_ColumnPropNameInTable="NoOfOccupancyColumn" msprop:Generator_UserColumnName="NoOfOccupancy" type="xs:int" minOccurs="0" />
+              <xs:element name="tblRoom_Status" msdata:Caption="tblRoom.Status" msprop:Generator_ColumnVarNameInTable="columntblRoom_Status" msprop:Generator_ColumnPropNameInRow="tblRoom_Status" msprop:Generator_ColumnPropNameInTable="tblRoom_StatusColumn" msprop:Generator_UserColumnName="tblRoom_Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
